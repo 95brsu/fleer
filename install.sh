@@ -249,11 +249,11 @@ hasFreePortRange() {
   checkSystemHasRecommendedResources "$os"
 
   # Warning for root users
-  if [[ "$EUID" -eq 0 ]]; then
-    echo "⚠️ WARNING: You're running the installer as ROOT user which is not recommended due to risks it poses to the system security. Create a sudo account, which allows you to execute commands with root privileges without logging in as root. Check our documentation to learn how to create a new user $defaultDocsSite/docs/node/Install and try again later, please!"
-
-    exit 1
-  fi
+  #if [[ "$EUID" -eq 0 ]]; then
+  #  echo "⚠️ WARNING: You're running the installer as ROOT user which is not recommended due to risks it poses to the system security. Create a sudo account, which allows you to execute commands with root privileges without logging in as root. Check our documentation to learn how to create a new user $defaultDocsSite/docs/node/Install and try again later, please!"
+#
+  #  exit 1
+ # fi
 
   # 🚑 Check if ports available
   if ! hasCommand lsof; then
